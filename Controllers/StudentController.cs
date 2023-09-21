@@ -4,7 +4,6 @@ using ThucHanh_2.Models;
 
 namespace ThucHanh_2.Controllers
 {
-    [Route("Admin/Student")]
     public class StudentController : Controller
     {
         private List<Student> listStudents = new List<Student>();
@@ -35,7 +34,6 @@ namespace ThucHanh_2.Controllers
             };
         }
 
-        [HttpGet("/Admin/Student/List")]
         public IActionResult Index()
         {
             return View(listStudents);

@@ -2,12 +2,18 @@
 
 @{
     ViewData["Title"] = "Student List";
-    Layout = "~/Views/Shared/MyLayoutHelper.cshtml";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
 }
 @section Scripts{
     <script>
         var table= document.querySelector("table");
-        table.onclick = "background-color:yellow";
+        table.onclick = function onTableClick() {
+            table.style = "background-color:red";
+
+        }
+        table.ondblclick = function onTableClick() {
+            table.style = "background-color: lime";
+        }
     </script>
 }
 @model IEnumerable<Student>
